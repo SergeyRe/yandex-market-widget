@@ -28,9 +28,32 @@
                     : w.addEventListener("YaMarketAffiliateLoad", start);
             })(window);
         </script>
+          <script type="text/javascript">
+            (function (w) {
+                function start() {
+                    w.removeEventListener("YaMarketAffiliateLoad", start);
+                    w
+                        .YaMarketAffiliate
+                        .createWidget({
+                            type: "offers",
+                            containerId: "marketWidget2",
+                            rotate: false,
+                            params: {
+                                clid: 2403268,
+                                searchModelIds:: [962050067],
+                                themeId: 4
+                            }
+                        });
+                }
+                w.YaMarketAffiliate
+                    ? start()
+                    : w.addEventListener("YaMarketAffiliateLoad", start);
+            })(window);
+        </script>
         <!-- End Yandex.Market Widget -->
     </head>
     <body>
         <div id="marketWidget"></div>
+        <div id="marketWidget2"></div>
     </body>
 </html>
