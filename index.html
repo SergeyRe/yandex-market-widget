@@ -17,7 +17,7 @@
                             containerId: "marketWidget",
                             rotate: false,
                             params: {
-                                clid: 2403268,
+                                clid: 2310490,
                                 searchModelIds: [101342550482],
                               // searchFilters: "glfilter=14866265:16087344&glfilter=15618990:15619018",
                             //  searchFilters: "glfilter=14866265%3A16087344_100598980580&glfilter=38314470%3A50197325_100598980580&glfilter=45128751%3A45128751_Other_100598980580",
@@ -29,36 +29,12 @@
                     ? start()
                     : w.addEventListener("YaMarketAffiliateLoad", start);
             })(window);
-        </script>
-          <script type="text/javascript">
-            (function (w) {
-                function start() {
-                    w.removeEventListener("YaMarketAffiliateLoad", start);
-                    w
-                        .YaMarketAffiliate
-                        .createWidget({
-                            type: "offers",
-                            containerId: "marketWidget2",
-                            rotate: false,
-                        fallback:false,
-                            params: {
-                                clid: 2403268,
-                                searchSkuIds: [100598980580],
-                                themeId: 9
-                            }
-                        });
-                }
-                w.YaMarketAffiliate
-                    ? start()
-                    : w.addEventListener("YaMarketAffiliateLoad", start);
-            })(window);
-        </script>
-        <!-- End Yandex.Market Widget -->
+       
     </head>
     <body>
        
 
         <div id="marketWidget"></div>
-        <div id="marketWidget2"></div>
+       
     </body>
 </html>
