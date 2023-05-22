@@ -17,8 +17,8 @@
                             containerId: "marketWidget",
                             rotate: false,
                             params: {
-                                clid: 2310490,
-                                searchModelIds: [102013049356],  
+                                clid: 2403268,
+                                searchSkuIds: [101860922034,100640725911],
                                 themeId: 4
                             }
                         });
@@ -27,14 +27,36 @@
                     ? start()
                     : w.addEventListener("YaMarketAffiliateLoad", start);
             })(window);
-       
+        </script>
+          <script type="text/javascript">
+            (function (w) {
+                function start() {
+                    w.removeEventListener("YaMarketAffiliateLoad", start);
+                    w
+                        .YaMarketAffiliate
+                        .createWidget({
+                            type: "offers",
+                            containerId: "marketWidget2",
+                            rotate: false,
+                        fallback:false,
+                            params: {
+                                clid: 2403268,
+                                searchModelIds: [1437074186],
+                                themeId: 9
+                            }
+                        });
+                }
+                w.YaMarketAffiliate
+                    ? start()
+                    : w.addEventListener("YaMarketAffiliateLoad", start);
+            })(window);
+        </script>
+        <!-- End Yandex.Market Widget -->
     </head>
     <body>
-
-       <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=proflex0d-20&m=amazon&o=15&p=8&l=as1&IS2=1&asins=B07TCSZ6KR&linkId=c9e43d9b10a3d87f211c6719bfbde718&bc1=000000&lt1=_blank&fc1=0e0ee8&lc1=bf000d&bg1=ffffff&f=ifr">
-</iframe>
+     
 
         <div id="marketWidget"></div>
-       
+        <div id="marketWidget2"></div>
     </body>
 </html>
